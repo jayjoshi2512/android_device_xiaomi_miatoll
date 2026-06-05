@@ -55,6 +55,10 @@ PRODUCT_PACKAGES += \
     Gallery2 \
     Calendar
 
+# Project Infinity Default Wallpaper
+PRODUCT_COPY_FILES += \
+    device/xiaomi/miatoll/wallpapers/default_wallpaper.png:system/media/default_wallpaper.png
+
 PRODUCT_COPY_FILES += \
      $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
