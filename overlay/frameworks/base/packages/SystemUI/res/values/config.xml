@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Project Infinity SystemUI Overlay - Status Bar Defaults -->
+<resources>
+
+    <!-- Show battery percentage inside the battery icon by default -->
+    <bool name="config_battery_percentage_setting_available">true</bool>
+
+    <!-- Show network speed indicator in status bar by default -->
+    <bool name="config_show_network_traffic">true</bool>
+
+    <!-- Number of quick settings tiles shown when collapsed (not expanded) -->
+    <integer name="quick_settings_num_columns">3</integer>
+
+    <!-- Number of rows in expanded quick settings panel -->
+    <integer name="quick_settings_max_rows">4</integer>
+
+    <!-- Enable double-tap to sleep on status bar -->
+    <bool name="config_statusBarDoubleTapSleepEnabled">true</bool>
+
+    <!-- Allow notification LED by default -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
+
+</resources>
