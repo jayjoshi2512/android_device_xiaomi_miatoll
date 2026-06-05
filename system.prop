@@ -30,3 +30,88 @@ vendor.mm.enable.qcom_parser=16777199
 # WFD
 persist.debug.wfd.enable=1
 vendor.sys.video.disable.ubwc=1
+
+
+# =============================================================
+# Project Infinity -- ROM Identity
+# These lines control what shows in Settings -> About Phone
+# =============================================================
+ro.build.display.id=ProjectInfinity-v1.0-16-miatoll
+ro.infinity.version=1.0
+ro.infinity.device=miatoll
+ro.infinity.codename=stellar
+
+# =============================================================
+# Project Infinity -- Performance Tuning
+# These improve smoothness and app launch speed
+# =============================================================
+
+# Increase HWUI cache for smoother UI rendering
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.path_cache_size=32
+
+# Faster app launch -- pre-allocate launcher memory
+ro.HOME_APP_ADJ=1
+
+# Allow more simultaneous background processes (improves multitasking)
+ro.sys.fw.bg_apps_limit=24
+
+# Reduce UI thread scheduling jitter
+ro.config.avoid_gfx_accel=0
+
+# GPU rendering instead of CPU for UI (better performance)
+debug.hwui.renderer=skiavk
+
+# Disable debug logging in release (speeds up system)
+persist.log.tag=*:S
+log.tag=*:S
+
+# Enable smooth display at 60hz minimum (miatoll supports 60hz)
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
+
+# Faster animation speed defaults (can also be set in Developer Options)
+ro.config.animation_fps=60
+
+# =============================================================
+# Project Infinity -- Play Integrity Spoof
+# Makes WhatsApp, BGMI, BHIM, banking apps work
+# Uses Google Pixel 9 Pro fingerprint for Android 16
+#
+# IMPORTANT: Google rotates valid fingerprints periodically.
+# If Play Integrity fails even after these lines, skip to Section 15.1
+# and use the PlayIntegrityFix Magisk module instead — it auto-updates.
+# =============================================================
+ro.product.build.fingerprint=google/caiman/caiman:16/BP1A.250505.003/13046678:user/release-keys
+ro.vendor.build.fingerprint=google/caiman/caiman:16/BP1A.250505.003/13046678:user/release-keys
+ro.system.build.fingerprint=google/caiman/caiman:16/BP1A.250505.003/13046678:user/release-keys
+ro.build.fingerprint=google/caiman/caiman:16/BP1A.250505.003/13046678:user/release-keys
+ro.build.description=caiman-user 16 BP1A.250505.003 13046678 release-keys
+ro.build.tags=release-keys
+ro.build.type=user
+ro.build.version.security_patch=2025-05-05
+
+# =============================================================
+# Project Infinity -- Network & Connectivity Tuning
+# =============================================================
+
+# Better TCP buffer sizes for improved download/upload
+net.tcp.buffersize.wifi=4096,87380,5242880,4096,16384,1048576
+net.tcp.buffersize.default=4096,87380,1048576,4096,16384,1048576
+net.tcp.buffersize.lte=4094,87380,2560000,4096,16384,1220608
+
+# Faster DNS lookup
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+
+# =============================================================
+# Project Infinity -- Battery Tuning
+# =============================================================
+
+# Reduce wakelock frequency for better standby battery life
+pm.sleep_mode=1
+
+# Aggressive doze mode (saves battery when screen is off)
+ro.vendor.qti.sys.fw.bservice_enable=true
+ro.vendor.qti.sys.fw.bservice_limit=5
+ro.vendor.qti.sys.fw.bservice_age=5000
