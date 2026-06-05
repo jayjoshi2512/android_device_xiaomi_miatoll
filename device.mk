@@ -45,7 +45,15 @@ PRODUCT_PACKAGES += \
     libspkrprot \
     libssrec \
     libvolumelistener \
-    sound_trigger.primary.atoll:32
+    sound_trigger.primary.atoll:32 \
+    LatinIME \
+    Trebuchet \
+    ThemePicker \
+    WallpaperPicker2 \
+    ExactCalculator \
+    Recorder \
+    Gallery2 \
+    Calendar
 
 PRODUCT_COPY_FILES += \
      $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -165,9 +173,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     $(LOCAL_PATH)/media/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
-
-# MiuiCamera
-$(call inherit-product-if-exists, device/xiaomi/miuicamera-miatoll/device.mk)
 
 # NFC
 PRODUCT_PACKAGES += \
