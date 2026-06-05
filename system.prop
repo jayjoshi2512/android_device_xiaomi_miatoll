@@ -155,3 +155,42 @@ debug.hwui.use_partial_updates=false
 
 # Game thermal headroom reporting (better heat management during extended gaming)
 ro.vendor.thermal.config.support=true
+
+
+# =============================================================
+# Project Infinity -- Additional UX and Hardware Tweaks
+# =============================================================
+
+# --- SCREENSHOT ---
+ro.product.silent_screenshot=true
+
+# --- CLIPBOARD ---
+persist.sys.clipboard.show_access_notifications=false
+
+# --- SCROLLING PHYSICS ---
+ro.view.fling_deceleration=400
+
+# --- MEMORY MANAGEMENT ---
+ro.sys.fw.use_trim_settings=true
+ro.sys.fw.empty_app_percent=50
+ro.sys.fw.trim_empty_percent=100
+ro.sys.fw.trim_cache_percent=100
+ro.vendor.qti.sys.fw.bservice_limit=6
+
+# --- VIBRATION ---
+ro.vibrator.hal.intensity.default=160
+
+# --- BRIGHTNESS ---
+ro.brightness.min=2
+
+# --- BLUETOOTH AUDIO ---
+ro.bluetooth.a2dp.codec.aptx.enabled=true
+ro.bluetooth.a2dp.codec.aptxhd.enabled=true
+ro.bluetooth.a2dp.codec.ldac.enabled=true
+
+# --- CAMERA ---
+persist.camera.preview.ubuttons=0
+persist.camera.lowpower.set=0
+
+# --- MEDIA RECORDING ---
+ro.audio.monitorOrientation=true
