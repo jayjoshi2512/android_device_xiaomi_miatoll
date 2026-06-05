@@ -119,3 +119,39 @@ ro.vendor.qti.sys.fw.bservice_age=5000
 # Enable built-in call recording
 persist.call_recording.mode=1
 persist.call_recording.auto=0
+
+
+# =============================================================
+# Project Infinity -- Gaming & FPS Optimization
+# =============================================================
+
+# Allow apps to override the display's default refresh rate (enables 60fps in games)
+ro.surface_flinger.game_default_frame_rate_override=60
+ro.surface_flinger.use_frame_rate_api=true
+
+# Enable touch boost -- reduces input lag during gameplay
+persist.sys.perf.topAppRenderThreadBoost.enable=true
+
+# Qualcomm performance HAL -- enables gaming-mode CPU/GPU boosts automatically
+vendor.perf.iop_v3.enable=true
+vendor.perf.gestureflingboost.enable=true
+
+# Adreno GPU boost for gaming workloads
+ro.vendor.adreno.sysfs.devfreq.available=true
+debug.idrotatortimeout=500
+
+# Reduce frame pacing jitter (fixes micro-stutters in heavy game scenes)
+debug.sf.latch_unsignaled=1
+
+# Fling velocity tuning (smoother swipe gestures in UI and games)
+ro.min.fling_velocity=8000
+ro.max.fling_velocity=16000
+
+# Allow high-performance CPU mode for foreground gaming app
+persist.vendor.cpu.halfd_enabled=0
+
+# Disable per-app render thread limit (lets games use more CPU threads)
+debug.hwui.use_partial_updates=false
+
+# Game thermal headroom reporting (better heat management during extended gaming)
+ro.vendor.thermal.config.support=true
