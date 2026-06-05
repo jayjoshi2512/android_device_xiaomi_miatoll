@@ -15,6 +15,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from miatoll device
 $(call inherit-product, device/xiaomi/miatoll/device.mk)
 
+# Project Infinity -- Enable device overlays
+DEVICE_PACKAGE_OVERLAYS += device/xiaomi/miatoll/overlay
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
