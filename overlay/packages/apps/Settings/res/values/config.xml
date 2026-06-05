@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Project Infinity Settings App Overlay -->
+<resources>
+
+    <!-- Show memory usage in app info by default -->
+    <bool name="config_app_ops_stats_enabled">true</bool>
+
+    <!-- Enable developer options link in About Phone -->
+    <bool name="config_show_dev_options_footer">true</bool>
+
+</resources>
