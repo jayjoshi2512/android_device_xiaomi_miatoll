@@ -194,3 +194,17 @@ persist.camera.lowpower.set=0
 
 # --- MEDIA RECORDING ---
 ro.audio.monitorOrientation=true
+
+
+# =============================================================
+# Project Infinity -- Privacy & Security
+# =============================================================
+
+persist.privacy.dashboard.enable=true
+persist.pm.auto_revoke_enabled=true
+ro.logd.size=256K
+persist.logd.size=256K
+wifi.scan_background_throttle_interval_ms=1800000
+persist.bluetooth.btsnoopenable=false
+ro.wifi.permission.enable=true
+persist.radio.adb_log_on=0
