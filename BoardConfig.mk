@@ -195,3 +195,23 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit proprietary blobs
 include vendor/xiaomi/miatoll/BoardConfigVendor.mk
+
+
+# Project Infinity -- Kernel Build Optimizations
+
+# Use O3 optimization level (more aggressive than default O2)
+TARGET_KERNEL_CLANG_COMPILE := true
+KERNEL_CUSTOM_CFLAGS := -O3
+
+# Enable Link Time Optimization (reduces binary size, improves performance)
+TARGET_KERNEL_LTO := thin
+
+# Use latest Clang version from AOSP for better optimizations
+TARGET_KERNEL_CLANG_VERSION := latest
+
+# Enable polly optimizations (loop and memory access optimizations)
+KERNEL_CUSTOM_CFLAGS += -mllvm -polly
+
+# CPU-specific tuning for Snapdragon 720G (Cortex-A76 + Cortex-A55)
+TARGET_CPU_VARIANT := cortex-a76
+TARGET_CPU_VARIANT_RUNTIME := cortex-a76
